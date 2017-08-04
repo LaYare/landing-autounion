@@ -15,6 +15,6 @@
 
 	$headers = "From: contacto@autounion.com \r \n";
 
-	mail("klira@mellow.cc","Contacto Autounión", $body, $headers);
+	mail("fmorales@mellow.cc","Contacto Autounión", $body, $headers);
 	header('Location: index.html');
 ?>
