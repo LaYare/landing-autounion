@@ -1,0 +1,299 @@
+/* -- COLORES
+@azul #162834;
+@aclaro #212b37;
+@gris #9c9ca2;
+@naranja #f17123;
+@claro #eee;
+-- */
+
+body{
+ font-family: Helvetica,Arial,sans-serif !important;
+}
+.container{
+	max-width: 980px;
+}
+
+.logo{
+	margin: 115px 0 87px;
+	text-align: center;
+}
+
+.btn_orange{
+	margin-bottom: 66px;
+	text-align: center;
+}
+.btn_orange > a{
+	background-color: #f18123;
+	border-radius: 8px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 6px 30px;
+}
+.btn_orange > a:hover{
+	text-decoration: none;
+}
+
+header{
+	height: 610px;
+    background: url(../img/head_back.jpg) no-repeat;
+    background-color: #162834;
+    background-position-x: 94%;
+    background-position-y: -40px;
+    background-size: 130%;
+    color: #fff;
+    margin-right: -15px;
+    margin-left: -15px;
+    position: relative;
+}
+header .row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+header h1{
+	font-size: 30px;
+	font-weight: bold;
+	margin: 0 0 33px;
+	text-align: center;
+}
+header h1 > span{
+	background: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+}
+header .tagline{
+	background: rgba(0, 0, 0, 0.35);
+	height: 150px;
+	padding: 33px 0 30px;
+}
+
+header .tagline h3{
+	font-size: 22px;
+	font-weight: 400;
+	margin: 0;
+}
+
+.beneficios{
+	background-color: #212b37;
+	background-image: url(../img/fecha.png);
+	background-repeat: no-repeat;
+	background-position: top center, bottom center;
+	color: #fff;
+    margin-right: -15px;
+    margin-left: -15px;
+	text-align: center;
+	padding-bottom: 100px;
+	position: relative;
+
+/*
+    -webkit-mask-image: linear-gradient(to top right, transparent 49.5%, white 50.5%), linear-gradient(to top left, transparent 49.5%, white 50.5%), linear-gradient(white, white);
+    mask-image: linear-gradient(to top right, transparent 49.5%, white 50.5%), linear-gradient(to top left, transparent 49.5%, white 50.5%), linear-gradient(white, white);
+    -webkit-mask-size: 50% 20%, 50% 20%, 100% 80%;
+    -webkit-mask-position: bottom left, bottom right, top left;
+    -webkit-mask-repeat: no-repeat;
+*/
+}
+
+.beneficios::after{
+    content: '';
+    position: absolute;
+    left: -50px;
+    bottom: 0px;
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-right: 50vw solid white;
+    border-left: 54vw solid white;
+}
+.beneficios::before{
+	background-image: url(../img/fecha.png);
+	background-repeat: no-repeat;
+
+    content: '';
+    height: 100px;
+    position: absolute;
+    top: -100px;
+	left: 0;
+    border-top: 60px solid transparent;
+    border-right: 54vw solid #212b37;
+    border-left: 50vw solid #212b37;
+/*
+    left: -50px;
+    top: -25px;
+    width: 0;
+    height: 0;
+
+*/
+}
+
+
+.beneficios h2{
+	padding: 30px 0 24px;
+}
+
+.b_info{
+	padding: 30px 7% 0;
+}
+.b_info:nth-of-type(2){
+	background: #1e2731;
+}
+
+.beneficios h2,
+.b_info h3{
+	font-size: 20px;
+	margin: 0;
+}
+.b_info h3{
+	padding-bottom: 30px;
+}
+.b_info p{
+	font-size: 14px;
+	padding: 30px 0;
+}
+
+.b_info img{
+	max-width: 40px;
+}
+
+
+.planes{
+	color: #4a4a4a;
+	margin: 28px 0 0;
+	text-align: center;
+}
+.planes h2{
+	font-size: 28px;
+	font-weight: 600;
+}
+.planes p{
+	font-size: 16px;
+	color: #4a4a4a;
+	line-height: 18px;
+	padding: 28px 0 23px;
+}
+.planes .table{
+	margin-bottom: 39px;
+}
+.planes .table th{
+	background: #162834;
+	color: #fff;
+	text-align: center;
+}
+.planes .table tr:nth-of-type(2n+1){
+	background: #eee;
+}
+
+.planes .table-bordered > tbody > tr > td{
+	border-color: #EEE
+}
+
+.menu-down .text-left{
+	color: #4a4a4a;
+	font-size: 14px;
+	font-weight: bold;
+}
+.menu-down.org .text-left{
+	color: #f17123
+}
+.menu-down .text-right{
+	font-size: 12px;
+	font-weight: normal;
+}
+.menu-down .text-right > span{
+	color: #f17123
+}
+.contacto h3{
+	color: #f17123;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 21px 0 20px;
+}
+.contacto input{
+	border-radius: 10px;
+	border-color: #9B9B9B;
+	font-size: 14px;
+	font-style: oblique;
+	margin-bottom: 13px;
+}
+
+.contacto input[type=submit]{
+	border: none;
+	background-color: #f18123;
+	border-radius: 8px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 4px 30px;
+	margin: 32px 0 64px;
+}
+
+footer{
+	text-align: center;
+	padding-bottom: 50px;
+}
+footer p{
+	font-size: 14px;
+	color: #4a4a4a;
+	margin: 18px 0 50px;
+}
+h2.publicaciones{
+	background-color: #162834;
+	color: #fff;
+	font-size: 16px;
+	font-weight: normal;
+	padding: 8px 0;
+}
+
+@media only screen and (max-width : 480px) {
+	.logo{
+		margin: 51px 0 36px;
+	}
+	header{
+		height: 550px;
+	    background-position-x: 38%;
+    	background-position-y: -10px;
+	    background-size: 220%;
+	}
+	header h1{
+		line-height: 40px;
+		padding: 0 80px;
+		margin-bottom: 36px;
+	}
+	header h1 span{
+		padding: 0 10px; 
+	}
+	header .tagline {
+	    padding: 23px 0 20px;
+	    height: auto;
+	}
+	.btn_orange{
+		margin-bottom: 40px;
+	}
+	.beneficios h2{
+		padding: 25px 0;
+	}
+	.b_info{
+		padding: 10px 7% 45px;
+	}
+	.b_info:nth-of-type(2){
+		background: none;
+	}
+	.contacto h3{
+		margin: 20px 0;
+	}
+	.planes h2{
+		margin: 33px 0;
+	}
+	.planes p{
+		margin: 33px 0;
+	}
+	footer{
+		padding-bottom: 20px;
+	}
+	footer p{
+		margin: 35px 0 0;
+	}
+	.panel-group{
+		margin-bottom: 15px;
+	}
+
+}
