@@ -36,7 +36,7 @@ body{
 
 header{
 	height: 610px;
-    background: url(../img/head_back.jpg) no-repeat;
+    background: url(../img/header_main.jpg) no-repeat;
     background-color: #162834;
     background-position-x: 94%;
     background-position-y: -40px;
@@ -280,7 +280,7 @@ h2.publicaciones{
 		margin-bottom: 36px;
 	}
 	header h1 span{
-		padding: 0 10px; 
+		padding: 0 10px;
 	}
 	header .tagline {
 	    padding: 23px 0 20px;
