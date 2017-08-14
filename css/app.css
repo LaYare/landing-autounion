@@ -13,6 +13,10 @@ body{
 	max-width: 980px;
 }
 
+.container-fluid {
+	overflow: hidden;
+}
+
 .logo{
 	margin: 115px 0 87px;
 	text-align: center;
@@ -23,7 +27,7 @@ body{
 	text-align: center;
 }
 .btn_orange > a{
-	background-color: #f18123;
+	background-color: #f17123;
 	border-radius: 8px;
 	color: #fff;
 	font-size: 18px;
@@ -32,6 +36,13 @@ body{
 }
 .btn_orange > a:hover{
 	text-decoration: none;
+}
+
+.btn-blog {
+	position: absolute;
+    z-index: 3;
+    right: 30px;
+    top: 30px;
 }
 
 header{
@@ -53,6 +64,7 @@ header .row{
 header h1{
 	font-size: 30px;
 	font-weight: bold;
+	height: 50px;
 	margin: 0 0 33px;
 	text-align: center;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
@@ -65,21 +77,18 @@ header h1 > span{
 header .tagline{
 	background: rgba(0, 0, 0, 0.35);
 	height: 150px;
-	padding: 33px 0 30px;
+	padding: 51px 0 30px;
 }
 
 header .tagline h3{
 	font-size: 22px;
-	font-weight: 400;
+	font-weight: 300;
 	margin: 0;
 	text-shadow:2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .beneficios{
 	background-color: #212b37;
-	background-image: url(../img/fecha.png);
-	background-repeat: no-repeat;
-	background-position: top center, bottom center;
 	color: #fff;
     margin-right: -15px;
     margin-left: -15px;
@@ -96,28 +105,38 @@ header .tagline h3{
 */
 }
 
+.beneficios__arrow {
+	position: absolute;
+	margin-top: -6px;
+	margin-left: -30px;
+}
+
+.beneficios__arrow--down {
+	position: absolute;
+	margin-top: -8px;
+	margin-left: 45.5%;
+}
+
 .beneficios::after{
     content: '';
     position: absolute;
-    left: -50px;
+    left: 0;
     bottom: 0px;
     width: 0;
     height: 0;
-    border-top: 60px solid transparent;
+    border-top: 57px solid transparent;
     border-right: 50vw solid white;
-    border-left: 54vw solid white;
+    border-left: 50vw solid white;
 }
 .beneficios::before{
-	background-image: url(../img/fecha.png);
-	background-repeat: no-repeat;
-
     content: '';
-    height: 100px;
+    height: 0;
+    width: 0;
     position: absolute;
-    top: -100px;
+    top: -56px;
 	left: 0;
-    border-top: 60px solid transparent;
-    border-right: 54vw solid #212b37;
+    border-top: 57px solid transparent;
+    border-right: 50vw solid #212b37;
     border-left: 50vw solid #212b37;
 /*
     left: -50px;
@@ -127,8 +146,32 @@ header .tagline h3{
 
 */
 }
+.beneficios__line {
+	height: 180px;
+}
+.beneficios__line::after{
+	content: '';
+	height: 50px;
+	width: 38vw;
+	margin-top: 10px;
+	right: 40px;
+	border-top: 1px solid #275877;
+	border-right: 1px solid #275877;
+	position: absolute;
+}
+.beneficios__line::before{
+	content: '';
+	height: 50px;
+	width: 38vw;
+	margin-top: 10px;
+	left: 40px;
+	border-top: 1px solid #275877;
+	border-left: 1px solid #275877;
+	position: absolute;
+}
+.beneficios__line::before {
 
-
+}
 .beneficios h2{
 	padding: 30px 0 24px;
 }
@@ -136,10 +179,32 @@ header .tagline h3{
 .b_info{
 	padding: 30px 7% 0;
 }
-.b_info:nth-of-type(2){
+.b_info:hover{
 	background: #1e2731;
 }
 
+.b_info:hover ::before {
+	content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    border-top: 30px solid transparent;
+    border-right: 17vw solid #1e2731;
+    border-left: 17vw solid #1e2731;
+}
+.b_info:hover ::after {
+	content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    border-top: 30px solid #1e2731;
+    border-right: 17vw solid #212b37;
+    border-left: 17vw solid #212b37;
+}
 .beneficios h2,
 .b_info h3{
 	font-size: 20px;
@@ -220,7 +285,7 @@ header .tagline h3{
 
 .contacto input[type=submit]{
 	border: none;
-	background-color: #f18123;
+	background-color: #f17123;
 	border-radius: 8px;
 	color: #fff;
 	font-size: 18px;
@@ -272,12 +337,13 @@ h2.publicaciones{
 		height: 550px;
 	    background-position-x: 38%;
     	background-position-y: -10px;
-	    background-size: 220%;
+	    background-size: 230%;
 	}
 	header h1{
 		line-height: 40px;
-		padding: 0 80px;
+		padding: 0;
 		margin-bottom: 36px;
+		height: 120px;
 	}
 	header h1 span{
 		padding: 0 10px;
@@ -285,6 +351,7 @@ h2.publicaciones{
 	header .tagline {
 	    padding: 23px 0 20px;
 	    height: auto;
+	    margin-top: 30px;
 	}
 	.btn_orange{
 		margin-bottom: 40px;
@@ -292,11 +359,53 @@ h2.publicaciones{
 	.beneficios h2{
 		padding: 25px 0;
 	}
+	.beneficios::after,
+	.beneficios::before{
+	    border-top: 25px solid transparent;
+	}
+	.beneficios::before{
+		top: -24px;
+    	left: -11px;
+    	border-right: 52vw solid #212b37;
+	    border-left: 52vw solid #212b37;
+	}
+	.beneficios::after {
+		left: -11px;
+		border-right: 52vw solid #fff;
+	    border-left: 52vw solid #fff;
+	}
+	.beneficios__arrow {
+		margin-top: -6px;
+		margin-left: -30px;
+	}
+	.beneficios__arrow--down {
+		margin-left: 39.5%;
+	}
+	.beneficios__line::after {
+		right: 30px;
+		width: 27vw;
+	}
+	.beneficios__line::before {
+		left: 30px;
+		width: 27vw;
+	}
 	.b_info{
 		padding: 10px 7% 45px;
 	}
-	.b_info:nth-of-type(2){
+	.b_info:hover{
 		background: none;
+	}
+	.b_info:hover ::before {
+		content: '';
+	    border-top: 0;
+	    border-right: 0;
+	    border-left: 0;
+	}
+	.b_info:hover ::after {
+		content: '';
+	    border-top: 0;
+	    border-right: 0;
+	    border-left: 0;
 	}
 	.contacto h3{
 		margin: 20px 0;
